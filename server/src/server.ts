@@ -6,9 +6,7 @@ app.get('/users', (request, response) => {
     
     return response.json({
         message: 'Foooooi',
-        habilidades: [
-            'react', 'node', 'typescript'
-        ]
+        habilidades: ['react', 'node', 'typescript', 'python', 'sql']
     });
 })
 
