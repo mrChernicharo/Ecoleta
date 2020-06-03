@@ -23,7 +23,9 @@ router.post('/points', async (request, response) => {
       name, email, whatsapp, longitude, latitude, city, uf, items,
    } = request.body;
 
-   const ids = await knex('points').insert({
+   const trx = await knex.transaction();
+
+   const insertedIds = await trx('points').insert({
       name, 
       image:'fake-img',
       email,
@@ -37,11 +39,11 @@ router.post('/points', async (request, response) => {
    const pointItems = items.map((item_id: number )=> {
       return {
          item_id,
-         point_id: ids[0],
+         point_id: insertedIds[0],
       }
    })
 
-   await knex('point_items').insert(pointItems);
+   await trx('point_items').insert(pointItems);
 
    return response.json({ success: true })
 });
