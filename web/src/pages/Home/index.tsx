@@ -16,13 +16,14 @@ const Home: React.FC = () => {
         <main>
           <h1>Seu marketplace de coleta de resíduos</h1>
           <p>Ajudamos pessoas a encontrar pontos de coleta de forma eficiente</p>
+          
           <Link to="/create-point" >
-
             <span>
               <FiLogIn />
             </span>
             <strong>Cadastrar ponto de coleta</strong>
           </Link>
+       
         </main>
       </div>
     </div>
