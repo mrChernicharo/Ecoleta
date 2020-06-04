@@ -46,7 +46,7 @@ class PointsController{
 
       const point = {
          name, 
-         image:'fake-img',
+         image:'https://images.unsplash.com/photo-1541855099555-42c6a7c57cfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=40',
          email,
          whatsapp, 
          longitude, 
