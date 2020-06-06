@@ -1,19 +1,36 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet } from 'react-native';
+import { Feather as Icon } from '@expo/vector-icons'
+import { View, ImageBackground , Image, Text, StyleSheet } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 
 
 const Home = () => {
 
 
   return (
-    <View style={styles.container}>
+    <ImageBackground 
+      source={require('../../assets/home-background.png')}
+      style={styles.container}
+      imageStyle={{ width: 274, height: 368 }}
+    >
      <View style={styles.main}>
        <Image source={require('../../assets/logo.png')}/>
        <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
        <Text style={styles.description}>Ajudamos pessoas a encontrar pontos de coleta de maneira eficiente.</Text>
 
      </View>
-    </View>);
+      <RectButton style={styles.button} onPress={() => {}}>
+        <View style={styles.buttonIcon}>
+          <Icon name="arrow-right" color="#fff" size={18}/>
+        </View>
+        <Text style={styles.buttonText}>
+          Entrar
+        </Text>
+      </RectButton>
+     <View style={styles.footer}>
+
+     </View>
+    </ImageBackground>);
 }
 
 
