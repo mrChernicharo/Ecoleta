@@ -1,23 +1,18 @@
 import React from 'react';
-import { AppLoading } from 'expo';
 import { View, Image, Text, StyleSheet } from 'react-native';
-import { Roboto_400Regular, Roboto_500Medium } from '@expo-google-fonts/roboto';
-import { Ubuntu_700Bold, useFonts } from '@expo-google-fonts/ubuntu';
+
 
 const Home = () => {
-  const [fontsLoaded] = useFonts({
-    Roboto_400Regular,
-    Roboto_500Medium,
-    Ubuntu_700Bold,
-  });
 
-  if (!fontsLoaded) {
-    return <AppLoading />
-  }
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../assets/logo.png')}/>
+     <View style={styles.main}>
+       <Image source={require('../../assets/logo.png')}/>
+       <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
+       <Text style={styles.description}>Ajudamos pessoas a encontrar pontos de coleta de maneira eficiente.</Text>
+
+     </View>
     </View>);
 }
 
@@ -26,6 +21,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 32,
+    backgroundColor: '#f0f0f5',
   },
 
   main: {
