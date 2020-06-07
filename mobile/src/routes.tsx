@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -14,7 +14,12 @@ const Routes = () => {
   return(
     <>
       <NavigationContainer>
-        <AppStack.Navigator headerMode="screen">
+        <AppStack.Navigator 
+        headerMode="none"
+        screenOptions={{
+          cardStyle:{ backgroundColor: '#f0f0f5' }
+        }}
+        >
           <AppStack.Screen name="Home" component={Home}/>
           <AppStack.Screen name="Points" component={Points}/>
           <AppStack.Screen name="Detail" component={Detail}/>
