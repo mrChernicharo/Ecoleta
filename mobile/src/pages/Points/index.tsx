@@ -60,7 +60,8 @@ useEffect(() => {
 
       const { latitude, longitude } = location.coords;
       
-      setInitialPosition([latitude, longitude]);
+      // setInitialPosition([latitude, longitude]);
+      setInitialPosition([-22.9305071, -43.2304666,]);
 
     }
 

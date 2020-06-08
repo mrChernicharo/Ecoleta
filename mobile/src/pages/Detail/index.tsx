@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Linking } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, SafeAreaView, Linking } from 'react-native';
 import { Feather as Icon } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import Constants from 'expo-constants';

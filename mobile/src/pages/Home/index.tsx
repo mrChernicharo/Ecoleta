@@ -1,6 +1,6 @@
 import React from 'react';
 import { RectButton } from 'react-native-gesture-handler';
-import { View, Image, ImageBackground, Text, StyleSheet } from 'react-native';
+import { View, Image, ImageBackground, Text, StyleSheet, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
 import { Feather as Icon } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 
@@ -13,17 +13,31 @@ const Home = () => {
   }
 
   return (
-    <ImageBackground 
+    
+
+      <ImageBackground 
       source={require('../../assets/home-background.png')}
       style={styles.container}
       imageStyle={{ width: 274, height: 368 }}
     >
-     <View style={styles.main}>
-       <Image source={require('../../assets/logo.png')}/>
-       <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
-       <Text style={styles.description}>Ajudamos pessoas a encontrar pontos de coleta de maneira eficiente.</Text>
+    <View style={styles.main}>
+      <Image source={require('../../assets/logo.png')}/>
+      <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
+      <Text style={styles.description}>Ajudamos pessoas a encontrar pontos de coleta de maneira eficiente.</Text>
 
-     </View>
+    </View>
+    <View style={styles.footer}>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Digite o estado"
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Digite a cidade"
+      />
+
       <RectButton style={styles.button} onPress={handleNavigationToPoints}>
         <View style={styles.buttonIcon}>
           <Icon name="arrow-right" color="#fff" size={18}/>
@@ -32,10 +46,13 @@ const Home = () => {
           Entrar
         </Text>
       </RectButton>
-     <View style={styles.footer}>
+     
 
      </View>
-    </ImageBackground>);    
+    </ImageBackground>
+
+
+  );    
 }
 
 
